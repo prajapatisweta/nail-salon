@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nail Salon</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/logo.png"
+          alt="Salon logo"
+          class="nav__logo"
+          id="logo"
+        />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Features</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Operations</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Testimonials</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#"
+              >BookSlot</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-content">
+        <div class="header__title">
+          <h1>
+            Glamour
+            <!-- highlight effect -->
+            <span class="highlight">elegance</span>
+            in every<br />
+            <span class="highlight">Brushstroke</span>
+          </h1>
+          <h4>Nail Perfection Unleash Your Confidence.</h4>
+          <button class="btn--text btn--scroll-to">
+            Learn more &DownArrow;
+          </button>
+        </div>
+        <div class="header-img">
+          <img
+            src="img/hero.png"
+            class="header__img"
+            alt="Nail Salon"
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Features</h2>
+        <h3 class="section__header">
+          Everything you need to know about us.
+        </h3>
+      </div>
+
+      <div class="features">
+        <div class="feature-row">
+          <div class="feature-img">
+            <img
+              src="img/digital-lazy.jpg"
+              data-src="img/digital.jpg"
+              alt="Computer"
+              class="features__img lazy-img"
+            />
+          </div>
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-award"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">100% Best Service</h5>
+            <p>
+              At our nail salon, we take pride in offering the very best in nail care and beauty services. Our experienced and dedicated team is committed to delivering top-notch, personalized experiences that leave you feeling pampered and radiant.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-globe"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">Expert Artists</h5>
+            <p>
+              We're proud to feature a team of the world's best professionals. Our talented and skilled experts are dedicated to providing you with the highest level of nail care and beauty services.
+            </p>
+          </div>
+          <div class="feature-img">
+            <img
+              src="img/grow-lazy.jpg"
+              data-src="img/grow.jpg"
+              alt="Plant"
+              class="features__img lazy-img"
+            />
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-img">
+            <img
+              src="img/card-lazy.jpg"
+              data-src="img/card.jpg"
+              alt="Credit card"
+              class="features__img lazy-img"
+            />
+          </div>
+
+          <div class="features__feature">
+            <div class="features__icon">
+              <svg>
+                <use xlink:href="img/icons.svg#icon-heart"></use>
+              </svg>
+            </div>
+            <h5 class="features__header">High Quality Products</h5>
+            <p>
+              We use the highest quality products and the latest techniques to ensure your nails are a work of art. Come and experience the ultimate in nail care and see why our salon is renowned for its exceptional service and unmatched dedication to your beauty and well-being.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--2">
+      <div class="section__title">
+        <h2 class="section__description">Operations</h2>
+        <h3 class="section__header">
+          Everything as simple as possible, but no simpler.
+        </h3>
+      </div>
+
+      <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+            data-tab="1"
+          >
+            <span>01</span>Nail Spa Services
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span>02</span>Gel Nail Services
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            <span>03</span>Acrylic Nail Services
+          </button>
+        </div>
+        <div
+          class="operations__content operations__content--1 operations__content--active"
+        >
+          <div class="operations__icon operations__icon--1">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-wind"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Manicures and Pedicures along with Nail Art.
+          </h5>
+          <p>
+            Including nail shaping, cuticle care, and nail polish application for both hands (manicure) and feet (pedicure).Creative and intricate nail designs, often involving hand-painted art, nail decals, rhinestones, and other embellishments.
+          </p>
+        </div>
+
+        <div class="operations__content operations__content--2">
+          <div class="operations__icon operations__icon--2">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-feather"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Type of nail enhancement that provides a glossy and long-lasting finish.
+          </h5>
+          <p>
+            Gel nails are created using a special gel product, which is typically applied in multiple layers, including a base coat, color coat, and topcoat. After each application, the nails are cured under a UV or LED light to harden and set the gel. This curing process creates a durable and chip-resistant finish.
+          </p>
+        </div>
+        <div class="operations__content operations__content--3">
+          <div class="operations__icon operations__icon--3">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-scissors"></use>
+            </svg>
+          </div>
+          <h5 class="operations__header">
+            Involve the application of acrylic powder and liquid.
+          </h5>
+          <p>
+            Acrylic nails are known for their strength and durability, making them ideal for individuals who want long, sturdy nails. The process typically includes the application of a base coat, acrylic mixture, and a topcoat. It's often used to create nail extensions, adding length to natural nails.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--3">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">Not sure yet?</h2>
+        <h3 class="section__header">
+          Many people have already loved our services.
+        </h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide slide--1">
+          <div class="testimonial">
+            <h5 class="testimonial__header">Best decision ever!</h5>
+            <blockquote class="testimonial__text">
+              I had a fantastic experience at Nail Salon! The atmosphere was so calming, and the staff was incredibly professional. I got a gel manicure, and my nails have never looked better. The attention to detail and the precision in nail art were impressive. I left the salon feeling relaxed and with beautiful, long-lasting nails. I'll definitely be a regular customer from now on!
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Jenny Lynn</h6>
+              <p class="testimonial__location">San Francisco, USA</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide slide--2">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Amazing staff and services.
+            </h5>
+            <blockquote class="testimonial__text">
+              Nail Salon is my go-to place for nail care. The team is friendly, and they consistently deliver top-quality services. I've tried both their gel and acrylic nail services, and I'm always amazed by the results. The cleanliness and hygiene standards are exceptional, which is a big plus. I appreciate the variety of nail art options they offer. It's a real treat for me to visit this salon.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Sarah Miles</h6>
+              <p class="testimonial__location">London, UK</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide slide--3">
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Finally free from trying different salons
+            </h5>
+            <blockquote class="testimonial__text">
+              An outstanding nail salon! I've been a customer at Nail Salon for several years now, and they never disappoint. Their paraffin wax treatments are my absolute favorite. My hands and feet feel incredibly soft and rejuvenated after each visit. The entire experience is a pampering delight, from the soothing ambiance to the skillful technicians.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Martha Gomes</h6>
+              <p class="testimonial__location">Lisbon, Portugal</p>
+            </address>
+          </div>
+        </div>
+
+        <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <section class="section section--sign-up">
+      <div class="section__title">
+        <h3 class="section__header">
+          Book your spa session and enjoy our pampering services today!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Book Slot Today!</button>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Pricing</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Terms of Use</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Careers</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Blog</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <img src="img/logo.png" alt="Logo" class="footer__logo" />
+      <p class="footer__copyright">
+        &copy; Copyright by
+        <a
+          class="footer__link twitter-link"
+          target="_blank"
+          href="https://linkedin.com/in/sweta-prajapati/"
+          >Sweta Prajapati</a>
+      </p>
+    </footer>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Book your session in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Book &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
