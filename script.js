@@ -79,6 +79,35 @@ document.querySelector('.nav__links').addEventListener('click', function(e) {
   }
 })
 
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+// *** this method is not optimal as it will create copy
+// tabs.forEach(t => t.addEventListener('click', () => 
+// console.log('tab')));
+
+// *** using event delegation for optimal usage
+tabsContainer.addEventListener('click', function(e) {
+  const clicked = e.target.closest('.operations__tab');
+
+  // ignoring any other click in that area
+  if(!clicked) return;
+
+  // remove active class
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+  
+  // activate tab
+  clicked.classList.add('operations__tab--active');
+
+  // Activate Content area
+  document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active');
+});
+
+// Menu Fade animation
+
 ///////////////////////////////////////////////////////
 
 const header = document.querySelector('.header');;
@@ -101,3 +130,20 @@ document.querySelector('.btn--close-cookie').addEventListener('click', function(
 
 //styles
 message.style.backgroundColor = '#37383d'
+
+// *****************************************
+const h1 = document.querySelector('h1');
+
+// --------- Going downwards
+// h1.querySelectorAll('.highlights');
+// h1.childNodes;
+// h1.children;
+h1.firstElementChild.style.color = 'white';
+
+//---------- going upward
+h1.parentNode;
+h1.parentElement;
+
+// -------- siblings
+h1.previousElementSibling;
+h1.nextElementSibling;
