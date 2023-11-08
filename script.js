@@ -6,6 +6,10 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const nav = document.querySelector('.nav');
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
 
 // Modal window
 
@@ -80,9 +84,6 @@ document.querySelector('.nav__links').addEventListener('click', function(e) {
 })
 
 // Tabbed component
-const tabs = document.querySelectorAll('.operations__tab');
-const tabsContainer = document.querySelector('.operations__tab-container');
-const tabsContent = document.querySelectorAll('.operations__content');
 
 // *** this method is not optimal as it will create copy
 // tabs.forEach(t => t.addEventListener('click', () => 
@@ -107,7 +108,34 @@ tabsContainer.addEventListener('click', function(e) {
 });
 
 // Menu Fade animation
+const handleHover = function(e){
+  if(e.target.classList.contains('nav__link')){
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
 
+    siblings.forEach(el => {
+      if(el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+}
+
+// passing arguments into handler
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+
+nav.addEventListener('mouseout', handleHover.bind(1));
+
+// Sticky Navigation
+const initialCoords = section1.getBoundingClientRect();
+console.log(initialCoords);
+
+window.addEventListener('scroll', function() {
+  console.log(window.scrollY);
+  if(window.scrollY > initialCoords.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky')
+});
+///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
 const header = document.querySelector('.header');;
@@ -118,9 +146,9 @@ message.textContent = 'We use cookies for improved functionality and analytics';
 message.innerHTML = `We use cookies for improved functionality and analytics <button class="btn btn--close-cookie">Got it!</button>`;
 
 // header.append(message);
+// header.after(message);
 
 // removing cookie
-header.before(message);
 document.querySelector('.btn--close-cookie').addEventListener('click', function() {
   message.remove();
 
