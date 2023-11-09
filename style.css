@@ -108,7 +108,7 @@ img {
 }
 
 .lazy-img {
-  /* filter: blur(20px); */
+  filter: blur(20px);
 }
 
 /* NAVIGATION */
@@ -125,7 +125,7 @@ img {
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.872);
 }
 
 .nav__logo {
@@ -290,7 +290,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 70%;
 }
 @media (max-width: 968px) {
   .feature-img img{
